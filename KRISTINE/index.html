@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal Happy New Month gift made with love for the woman who means the world."
+    />
+    <title>Happy New Month</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="progress-indicator" aria-hidden="true">
+      <span id="progress-label">01 / 10</span>
+      <div class="progress-track">
+        <span id="progress-bar"></span>
+      </div>
+    </div>
+
+    <div class="music-toggle" aria-label="Music controls">
+      <audio id="bg-music" loop preload="auto" src="audio/Perfect - Ed Sheeran.mp3"></audio>
+      <button id="music-control" type="button" aria-label="Mute music" aria-pressed="false">
+        <span class="music-icon">♫</span>
+        <span class="music-text">Mute</span>
+      </button>
+    </div>
+
+    <main>
+      <div class="romance-ambience" aria-hidden="true">
+        <span class="floating-symbol" style="--left: 7%; --duration: 34s; --delay: -16s; --size: 1.3rem">♡</span>
+        <span class="floating-symbol" style="--left: 18%; --duration: 29s; --delay: -7s; --size: 0.9rem">✧</span>
+        <span class="floating-symbol" style="--left: 31%; --duration: 37s; --delay: -24s; --size: 1.5rem">♥</span>
+        <span class="floating-symbol" style="--left: 44%; --duration: 32s; --delay: -12s; --size: 1rem">♡</span>
+        <span class="floating-symbol" style="--left: 57%; --duration: 39s; --delay: -29s; --size: 1.2rem">✦</span>
+        <span class="floating-symbol" style="--left: 69%; --duration: 30s; --delay: -18s; --size: 1.6rem">♡</span>
+        <span class="floating-symbol" style="--left: 81%; --duration: 36s; --delay: -4s; --size: 0.9rem">♥</span>
+        <span class="floating-symbol" style="--left: 93%; --duration: 33s; --delay: -22s; --size: 1.3rem">✧</span>
+      </div>
+      <section class="intro-screen section" id="intro">
+        <div class="intro-ambient"></div>
+        <div class="intro-content reveal-card">
+          <div class="intro-copy">
+            <p class="eyebrow" id="intro-tagline">Happy New Month,</p>
+            <h1 id="intro-name">Kristine</h1>
+            <p class="intro-lead">Before this new month begins...</p>
+            <button class="primary-button" type="button" data-scroll-target="#welcome" data-start-music="true">
+              Open this
+            </button>
+          </div>
+          <figure class="intro-portrait image-backdrop">
+            <img id="hero-photo" alt="Kristine" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-section section" id="welcome">
+        <div class="container narrow">
+          <p class="section-tag">Welcome</p>
+          <h2>Happy New Month, <span id="her-name">Kristine</span>.</h2>
+          <p id="welcome-message" class="lead-message"></p>
+        </div>
+      </section>
+
+      <section class="story-section section" id="her">
+        <div class="container">
+          <p class="section-tag">Her</p>
+          <h3>Someone worth celebrating.</h3>
+          <div class="her-gallery">
+            <figure class="photo-frame frame-editorial image-backdrop reveal-card">
+              <img id="her-main-photo" alt="Portrait of Kristine" />
+            </figure>
+            <div id="her-supporting-grid" class="supporting-grid"></div>
+          </div>
+          <p id="her-photo-caption" class="photo-caption"></p>
+        </div>
+      </section>
+
+      <section class="story-section section" id="him">
+        <div class="container him-layout">
+          <div class="him-copy reveal-card">
+            <p class="section-tag">From me to you.</p>
+            <h3>From me to you.</h3>
+            <p id="him-message" class="lead-message"></p>
+          </div>
+          <figure class="photo-frame him-photo-frame image-backdrop reveal-card">
+            <img id="him-photo" alt="Photo of the man who made this gift" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-section section" id="letter">
+        <div class="container narrow">
+          <p class="section-tag">From me, to you</p>
+          <h3>A few words from me to you.</h3>
+          <article class="letter-card reveal-card">
+            <div id="personal-letter" class="letter-text" aria-live="polite"></div>
+            <nav class="letter-pagination" aria-label="Letter pages">
+              <button id="letter-previous" class="letter-page-button" type="button" aria-label="Previous letter page">&#8249;</button>
+              <span id="letter-page-label" class="letter-page-label" aria-live="polite"></span>
+              <button id="letter-next" class="letter-page-button" type="button" aria-label="Next letter page">&#8250;</button>
+            </nav>
+          </article>
+        </div>
+      </section>
+
+      <section class="story-section section" id="us">
+        <div class="container couple-layout">
+          <div class="couple-copy reveal-card">
+            <p class="section-tag">Us</p>
+            <h3>A life I want to build with you.</h3>
+            <p id="couple-photo-message" class="couple-message"></p>
+          </div>
+          <figure class="photo-frame frame-couple image-backdrop reveal-card">
+            <img id="us-photo" alt="Photo of the couple together" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-section section" id="love">
+        <div class="container narrow">
+          <p class="section-tag">Love</p>
+          <h3>There are things about you I never want to take for granted.</h3>
+          <div id="love-grid" class="accordion-grid"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="love-quiz-section">
+        <div class="container narrow">
+          <p class="section-tag">A little us</p>
+          <h3>The love quiz.</h3>
+          <div id="love-quiz" class="love-quiz-panel" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="open-when">
+        <div class="container narrow">
+          <p class="section-tag">Open when...</p>
+          <h3>Keep these for whenever you need them.</h3>
+          <div id="open-when-grid" class="envelope-grid"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="wishes">
+        <div class="container narrow">
+          <p class="section-tag">This month</p>
+          <h3>This month, I wish for you...</h3>
+          <div id="wishes-grid" class="wishes-grid"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="month-plan">
+        <div class="container narrow">
+          <p class="section-tag">Us this month</p>
+          <h3>This month, let's...</h3>
+          <div id="month-plan-items" class="plan-list"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="timeline">
+        <div class="container narrow">
+          <p class="section-tag">The future</p>
+          <h3>Things I can't wait to do with you.</h3>
+          <div id="timeline-list" class="timeline"></div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="surprise">
+        <div class="container narrow surprise-box reveal-card">
+          <p class="section-tag">There is something else...</p>
+          <button id="surprise-button" class="secondary-button" type="button">Show me</button>
+          <div id="surprise-reveal" class="surprise-reveal">
+            <p>If I could choose one person to walk into another month with...</p>
+            <p>I'd still choose you.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-section section" id="final-message">
+        <div class="container narrow final-wrap reveal-card">
+          <p class="section-tag">One last thing...</p>
+          <h3>One last thing...</h3>
+          <div id="final-letter" class="final-letter"></div>
+          <p class="sign-off">Happy New Month, my love.</p>
+          <p class="signature">— <span id="his-name">Julian</span></p>
+        </div>
+      </section>
+
+      <section class="ending-screen section" id="ending">
+        <div class="container narrow ending-content">
+          <p class="ending-small">Another month.</p>
+          <h4>Another chapter.</h4>
+          <p class="ending-lines">More laughter.<br />More reasons to smile.<br />More dream days.<br />More us.</p>
+          <p class="ending-badge">Happy New Month ❤️</p>
+          <button id="replay-button" class="primary-button" type="button">Replay</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
